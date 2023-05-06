@@ -1,0 +1,46 @@
+public class MedicientTimeGenerator {
+    public static void createTaskBasedonTabletCount(List<Medicine__c> medicineRecord){
+        Set<Id> mID = new Set<Id>();
+        List<Task> taskList = new List<Task>();
+        for(Medicine__c mRecord : medicineRecord){
+            mID.add(mRecord.Id);
+        }
+        List<Medicine__c> mList = [SELECT Id, Name,Start_Date__c, End_Date__c, Tablet_Quantity__c, Liquid_Quantity__c, Isactive__c, Medicine_Type__c, Patient__c, patient__r.OwnerID 
+                                   FROM Medicine__c WHERE Id IN :mID];
+        for(Medicine__c mRecord : mList){
+            for(Integer i = 1 ; i <= Integer.valueof(mRecord.Tablet_Quantity__c) ; i++ ){
+                if(i == 1){
+                        Task task = new Task();
+                        task.WhatId = mRecord.Id;
+                        task.OwnerId = mRecord.patient__r.OwnerID;
+                        task.Subject = 'Morning Table ' + mRecord.Name;
+                        task.ActivityDate = mRecord.End_Date__c;
+                        task.Status = 'Not Started';
+                        taskList.add(task);
+                }
+                else if(i == 2){
+                        Task task = new Task();
+                        task.WhatId = mRecord.Id;
+                        task.OwnerId = mRecord.patient__r.OwnerID;
+                        task.Subject = 'Afternoon Table ' + mRecord.Name;
+                        task.ActivityDate = mRecord.End_Date__c;
+                        task.Status = 'Not Started';
+                        taskList.add(task);
+                }
+                else if(i == 3){
+                        Task task = new Task();
+                        task.WhatId = mRecord.Id;
+                        task.OwnerId = mRecord.patient__r.OwnerID;
+                        task.Subject = 'Evening Table ' + mRecord.Name;
+                        task.ActivityDate = mRecord.End_Date__c;
+                        task.Status = 'Not Started';
+                        taskList.add(task);
+                }
+            }
+        }
+        if(taskList.size() > 0){
+            insert taskList;
+        }
+    }
+
+}
