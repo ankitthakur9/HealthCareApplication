@@ -11,6 +11,6 @@ Health tips: The application can provide daily Health tips on Health Tips tab to
 
 Overall, the elder healthcare application built on Salesforce Lightning platform is a powerful tool for managing the healthcare needs of elderly patients. It provides real-time data and analytics on home tab, medication management, task management, event management making it an indispensable tool for caregivers and healthcare providers.
 
-Note - The prototype application is available in salesforce mobile app and mobile app can be access through admin engagement(by me), some of there functionalities can not been shown in githhub due to their proprietary nature.
-the above added code file can only useful in salesforce developer edition to run particular task in backend for prototype application.
-I have added the working prototype application images above to showcase appliaction.
+Note - The prototype application is available in salesforce mobile app and mobile app can be access through admin engagement(by me), some of there functionalities can not been shown in github due to their proprietary nature.
+the above code file can only useful in salesforce developer edition to run particular task in backend for prototype application.
+I have added the working prototype application images above to showcase application.
