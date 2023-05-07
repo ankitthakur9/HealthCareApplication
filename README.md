@@ -1,4 +1,4 @@
-# HealthCareApplication
+# ElderCare Application
 Elder healthcare application built on Salesforce Lightning platform is a mobile application designed to assist and manage the healthcare needs of elderly patients. The application is specifically designed to be used on mobile devices, making it accessible and easy to use for both caregivers and elderly patients.
 The application is built using the Salesforce Lightning Platform, which provides a powerful set of tools for creating custom applications with a user-friendly interface. The Lightning Platform allows developers to quickly and easily build robust applications that can integrate with other Salesforce applications.
 The elder healthcare application is designed to help caregivers manage their patients' health by providing real-time data and analytics. The application can track medications,daily task, events and alerts when patients is missing something important that marks on application calendar or task.
